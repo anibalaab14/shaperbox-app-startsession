@@ -17,7 +17,7 @@ app.post('/shaperbox/v1/app-startSession', function (req, res) {
 
             if (result == "") {
                 console.log("no existen coincidencias")
-                return res.status({
+                return res.send({
                     statusCode: 204,
                     statusDescription: 'Usuario no existe'
                 });
