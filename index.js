@@ -17,9 +17,9 @@ app.post('/shaperbox/v1/app-startSession', function (req, res) {
 
             if (result == "") {
                 console.log("no existen coincidencias")
-                return res.status(StatusCodes.NO_CONTENT).json({
-                    statusCode: StatusCodes.NO_CONTENT,
-                    statusDescription: 'No Content'
+                return res.status({
+                    statusCode: 204,
+                    statusDescription: 'Usuario no existe'
                 });
             } else {
                 console.log("usuario encontrado");
@@ -27,9 +27,9 @@ app.post('/shaperbox/v1/app-startSession', function (req, res) {
                     console.log("password coinciden");
                     res.send(result[0]);
                 } else {
-                    return res.status(StatusCodes.NON_AUTHORITATIVE_INFORMATION).json({
-                        statusCode: StatusCodes.NON_AUTHORITATIVE_INFORMATION,
-                        statusDescription: 'Non Authoritative Information'
+                    return res.send({
+                        statusCode: 203,
+                        statusDescription: 'Password incorrectas' 
                     });
                 }
             }
