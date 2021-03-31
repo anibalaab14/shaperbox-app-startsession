@@ -1,12 +1,12 @@
 # AFTER CLONING REPOSITORY
 
--npm install
--npm start
+- npm install
+- npm start
 
 # ENVIROMENT VARIABLES
 
--PORT
--MONGODB_URI
+- PORT
+- MONGODB_URI
 
 # FOR DEPLOY
 
