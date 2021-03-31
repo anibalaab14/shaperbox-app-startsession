@@ -11,7 +11,7 @@ MONGODB_URI
 # FOR DEPLOY
 
 for deploy in production:
-- git push heroku master
+- git push heroku 
 
 # FOR PUSH 
 
